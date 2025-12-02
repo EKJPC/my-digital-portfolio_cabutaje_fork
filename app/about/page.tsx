@@ -60,8 +60,8 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20"></div>
                 <div className="relative overflow-hidden rounded-xl border border-primary/20 bg-background p-2">
                   <Image
-                    src="/cyber-guardian.png"
-                    alt="John Smith - Cybersecurity Professional"
+                    src="/me.jpg"
+                    alt="Cabutaje - Cybersecurity Professional"
                     width={500}
                     height={500}
                     className="rounded-lg object-cover w-full h-full"
