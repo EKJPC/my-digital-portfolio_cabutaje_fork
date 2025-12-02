@@ -29,36 +29,14 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
+      {/* Hero Section - Graphics moved to LEFT */}
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">
-                  Securing Your Digital Future
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Expert cybersecurity solutions to protect your organization from evolving threats. Penetration
-                  testing, security audits, and incident response services.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                {/* <Link href="/contact">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Get Started
-                  </Button>
-                </Link> */}
-                <Link href="/projects">
-                  <Button size="lg" variant="outline">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
+          <div className="grid gap-6 lg:grid-cols-[400px_1fr] lg:gap-12 xl:grid-cols-[600px_1fr]">
+            {/* MOVED: Graphics on the LEFT now */}
+            <div className="flex items-center justify-center order-2 lg:order-1">
               <div className="relative w-full max-w-[500px] aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
                 <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 p-6 rounded-2xl shadow-2xl">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2 col-span-2">
@@ -84,6 +62,26 @@ export default async function Home() {
                   </div>
                   <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
                 </div>
+              </div>
+            </div>
+            
+            {/* Text on the RIGHT now */}
+            <div className="flex flex-col justify-center space-y-4 order-1 lg:order-2">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500">
+                  Securing Your Digital Future
+                </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  Expert cybersecurity solutions to protect your organization from evolving threats. Penetration
+                  testing, security audits, and incident response services.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link href="/projects">
+                  <Button size="lg" variant="outline">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -176,54 +174,12 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Experience Section - Image grid repositioned to LEFT */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_800px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Experience</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  15+ Years of Cybersecurity Expertise
-                </h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                  With extensive experience in the cybersecurity industry, I&apos;ve helped organizations of all sizes
-                  protect their digital assets and infrastructure.
-                </p>
-              </div>
-              <ul className="grid gap-2 py-4">
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Certified Information Systems Security Professional (CISSP)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Certified Ethical Hacker (CEH)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Offensive Security Certified Professional (OSCP)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/10 p-1">
-                    <Shield className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Certified Cloud Security Professional (CCSP)</span>
-                </li>
-              </ul>
-              <div>
-                <Link href="/about">
-                  <Button variant="outline">Learn More About My Experience</Button>
-                </Link>
-              </div>
-            </div>
-            <div className="flex items-center justify-center lg:justify-end">
+          <div className="grid gap-6 lg:grid-cols-[600px_1fr] lg:gap-12 xl:grid-cols-[800px_1fr]">
+            {/* MOVED: Images on the LEFT */}
+            <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
                 <div className="grid gap-4">
                   <div className="overflow-hidden rounded-lg bg-primary/10 p-2 lg:p-4">
@@ -285,6 +241,51 @@ export default async function Home() {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+            
+            {/* Text on the RIGHT */}
+            <div className="flex flex-col justify-center space-y-4 order-1 lg:order-2">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Experience</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  15+ Years of Cybersecurity Expertise
+                </h2>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+                  With extensive experience in the cybersecurity industry, I&apos;ve helped organizations of all sizes
+                  protect their digital assets and infrastructure.
+                </p>
+              </div>
+              <ul className="grid gap-2 py-4">
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-primary/10 p-1">
+                    <Shield className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Certified Information Systems Security Professional (CISSP)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-primary/10 p-1">
+                    <Shield className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Certified Ethical Hacker (CEH)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-primary/10 p-1">
+                    <Shield className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Offensive Security Certified Professional (OSCP)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="rounded-full bg-primary/10 p-1">
+                    <Shield className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Certified Cloud Security Professional (CCSP)</span>
+                </li>
+              </ul>
+              <div>
+                <Link href="/about">
+                  <Button variant="outline">Learn More About My Experience</Button>
+                </Link>
               </div>
             </div>
           </div>

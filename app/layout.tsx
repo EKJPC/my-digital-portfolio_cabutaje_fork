@@ -7,20 +7,13 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
 import { AuthSync } from "@/components/auth-sync";
-// import {
-//   SignInButton,
-//   SignUpButton,
-//   SignedIn,
-//   SignedOut,
-//   UserButton,
-// } from "@clerk/nextjs"; // Removed unused imports
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CyberShield | Cybersecurity Portfolio",
-  description: "Professional portfolio showcasing expertise in cybersecurity",
-    generator: 'v0.dev'
+  title: "CyberBuckler | Cybersecurity Portfolio",
+  description: "Professional portfolio showcasing expertise in cybersecurity - Created by EKJPC",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
